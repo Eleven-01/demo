@@ -1,0 +1,27 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="title-container">
+    <text class="title">贪吃蛇小游戏</text>
+  </view>
+
+  <view class="score-container">
+    <text class="score-text">历史最高分: {{highScore}}</text>
+  </view>
+
+  <view class="button-container">
+    <button class="start-btn" bindtap="startGame">开始游戏</button>
+    <button class="rules-btn" bindtap="showRules">游戏规则</button>
+  </view>
+
+  <view class="snake-animation">
+    <!-- 简单的蛇形图案 -->
+    <view class="snake-body"></view>
+    <view class="snake-body"></view>
+    <view class="snake-body snake-head"></view>
+    <view class="food"></view>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">滑动控制方向 · 吃到食物得分</text>
+  </view>
+</view>

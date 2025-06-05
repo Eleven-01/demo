@@ -1,0 +1,110 @@
+/* pages/game/game.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f0f9ff, #e1f5fe);
+}
+
+.game-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #1E8449;
+  margin-bottom: 20rpx;
+  text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  letter-spacing: 4rpx;
+  position: relative;
+}
+
+.game-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rpx;
+  height: 4rpx;
+  background: linear-gradient(to right, #2E8B57, #3CB371);
+  border-radius: 2rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15rpx 25rpx;
+  margin-bottom: 30rpx;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+}
+
+.score-label {
+  font-size: 34rpx;
+  color: #444;
+  margin-right: 8rpx;
+}
+
+.score-value {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1E8449;
+  text-shadow: 0 1rpx 2rpx rgba(0, 0, 0, 0.1);
+}
+
+.canvas-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  border: 2rpx solid rgba(0, 0, 0, 0.2);
+  border-radius: 12rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 25rpx 0;
+}
+
+.control-btn {
+  font-size: 30rpx;
+  background: linear-gradient(to bottom, #2E8B57, #1E8449);
+  color: white;
+  padding: 15rpx 25rpx;
+  margin: 0 12rpx;
+  border-radius: 50rpx;
+  min-width: 160rpx;
+  box-shadow: 0 6rpx 12rpx rgba(30, 132, 73, 0.3);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+}
+
+.control-btn:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 2rpx 6rpx rgba(30, 132, 73, 0.3);
+}
+
+.instructions {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #555;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15rpx 30rpx;
+  border-radius: 50rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}

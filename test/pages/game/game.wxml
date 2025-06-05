@@ -1,0 +1,32 @@
+<!-- pages/game/game.wxml -->
+<view class="container">
+  <view class="game-title">贪吃蛇</view>
+  
+  <view class="header">
+    <view class="score-container">
+      <text class="score-label">得分: </text>
+      <text class="score-value">{{score}}</text>
+    </view>
+    <view class="score-container">
+      <text class="score-label">最高分: </text>
+      <text class="score-value">{{highScore}}</text>
+    </view>
+  </view>
+
+  <view class="canvas-container">
+    <canvas type="2d" id="gameCanvas" style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;" 
+      bindtouchstart="touchStart" bindtouchend="touchEnd"></canvas>
+  </view>
+
+  <view class="controls">
+    <button class="control-btn" bindtap="{{paused ? 'startGame' : 'pauseGame'}}">
+      {{paused ? '开始' : '暂停'}}
+    </button>
+    <button class="control-btn" bindtap="restartGame">重新开始</button>
+    <button class="control-btn" bindtap="goToIndex">返回首页</button>
+  </view>
+
+  <view class="instructions">
+    <text>游戏说明: 滑动屏幕控制蛇的方向</text>
+  </view>
+</view>
